@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chromium Browser kernel version detection</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/core.js"></script>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAAeklEQVRoge3YsQnAIBQGYQ3ZKO7fpjGjZAYjpMgEvxzhPrD1cWL16tH7KCFXa2XEbv9s+RF5RlAYQWEEhREURlAYQWEEhREURlAYQWEERZ1nwWYoa48mzCc67x4c8PrFdzKCwggKIyiMoDCCwggKIyiMoDCCwggKIyge5XUK3+bQhpIAAAAASUVORK5CYII="  />
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="bookmark" href="favicon.ico"/>
+</head>
+
+<body onload="whatBrowser();what1Browser()" >
+
+<div id="doc">
+    <div class="doc_ft">
+        <div id="bd">
+            <h1>Test results of your browser kernel version</h1>
+            <div class="version">
+                <div class="in" id="in">
+                    <h2 id="version">未能检测到极速内核版本号</h2>
+                    <table border="0" cellpadding="0" cellspacing="0" class="tb" id="tb">
+                        <tr>
+                            <td><div align="center" id="suggestion">请使用双核浏览器的极速模式或其他Chromium、Webkit内核浏览器进行检测。</div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+   </div> 
+   <div align="center"> 
+   </div> 
+  </div>
+</div> 
+
+<SCRIPT> 
+function what1Browser() {  
+document.Browser.Name.value=navigator.appName;  
+document.Browser.Version.value=navigator.appVersion;  
+document.Browser.Code.value=navigator.appCodeName;  
+document.Browser.Agent.value=navigator.userAgent;  
+}  
+</SCRIPT> 
+
+
+
+
+<div style="margin: auto auto;">
+<TABLE border="2" style="margin: auto auto;"> 
+
+<FORM NAME="Browser" > 
+<TR> 
+<TD> 浏览器名称: </TD> 
+<TD> <INPUT TYPE="txt" NAME="Name" Size="120%" readonly="true"></TD> 
+</TR> 
+<TR> 
+<TD> 版本号:</TD> 
+<TD> <INPUT TYPE="txt" NAME="Version" Size="120%" readonly="true"></TD> 
+</TR> 
+<TR> 
+<TD> 代码名称: </TD> 
+<TD> <INPUT TYPE="txt" NAME="Code" Size="120%" readonly="true"></TD> 
+</TR> 
+<TR> 
+<TD> 用户代理标识:</TD> 
+<TD> <INPUT TYPE="txt" NAME="Agent" Size="120%" readonly="true"></TD> 
+</TR> 
+</FORM> 
+</TABLE> 
+</div>
+
+
+
+
+</body>
+</html>

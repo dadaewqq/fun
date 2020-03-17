@@ -1,0 +1,50 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5网页在线代码编辑器</title>
+<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAAeklEQVRoge3YsQnAIBQGYQ3ZKO7fpjGjZAYjpMgEvxzhPrD1cWL16tH7KCFXa2XEbv9s+RF5RlAYQWEEhREURlAYQWEEhREURlAYQWEERZ1nwWYoa48mzCc67x4c8PrFdzKCwggKIyiMoDCCwggKIyiMoDCCwggKIyge5XUK3+bQhpIAAAAASUVORK5CYII="  />
+<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="codemirror/theme/monokai.css">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background: #222;
+}
+
+/* Codemirror */
+.Codemirror {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<script src="codemirror/lib/codemirror.js"></script>
+<script src="codemirror/addon/edit/closetag.js"></script>
+<script src="codemirror/mode/xml/xml.js"></script>
+<script src="codemirror/mode/javascript/javascript.js"></script>
+<script src="codemirror/mode/css/css.js"></script>
+<script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="code-blast.js"></script>
+
+<script>
+window.cm = CodeMirror(document.body, {
+	lineNumbers: true,
+	mode:  "htmlmixed",
+	theme: 'monokai',
+	lineWrapping: true,
+	autofocus: true,
+	tabSize: 2,
+	value: "<article>\n  <h1>Code blast plugin for Codmirror</h1>\n  <div class=\"based-on\">\n    适用浏览器：chromium内核. 不支持Safari、IE8及以下浏览器。</div>\n  \n  <div>\n\t   Have fun~\n  </div>\n  \n</article>",
+	autoCloseTags: true,
+	blastCode: { effect: 2 },
+});
+</script>
+
+</body>
+</html>

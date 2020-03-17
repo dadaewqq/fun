@@ -1,0 +1,243 @@
+{
+	"approved" : true,
+	"description" : "蕾姆落樱效果+可视化音频可调整+支持壁纸自定义",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"SemiCircledirection" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "向上",
+						"value" : 1
+					},
+					{
+						"label" : "向下",
+						"value" : 2
+					}
+				],
+				"order" : 5,
+				"text" : "<br />半圆方向<br />SemiCircle direction<br />",
+				"type" : "combo",
+				"value" : 1
+			},
+			"blurColor" : 
+			{
+				"order" : 13,
+				"text" : "<br />模糊颜色<br />Blur color<br />",
+				"type" : "color",
+				"value" : "1 0.8 0.8"
+			},
+			"cX" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 14,
+				"text" : "<br />圆心-X(%)<br />Center of circle-X(%)<br />",
+				"type" : "slider",
+				"value" : 50
+			},
+			"cY" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 15,
+				"text" : "<br />圆心-Y(%)<br />Center of circle-Y(%)<br />",
+				"type" : "slider",
+				"value" : 50
+			},
+			"color" : 
+			{
+				"order" : 12,
+				"text" : "<br />颜色<br />Color<br />",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"direction" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "向外",
+						"value" : 1
+					},
+					{
+						"label" : "向内",
+						"value" : 2
+					},
+					{
+						"label" : "双向",
+						"value" : 3
+					}
+				],
+				"order" : 7,
+				"text" : "<br />方向<br />direction<br />",
+				"type" : "combo",
+				"value" : 1
+			},
+			"image" : 
+			{
+				"order" : 1,
+				"text" : "<br />自定背景图<br />Background img<br />",
+				"type" : "file"
+			},
+			"lineWidth" : 
+			{
+				"max" : 10,
+				"min" : 1,
+				"order" : 9,
+				"text" : "<br />线宽<br />line width<br />",
+				"type" : "slider",
+				"value" : 9
+			},
+			"radius" : 
+			{
+				"max" : 80,
+				"min" : 40,
+				"order" : 10,
+				"text" : "<br />半径(%)<br />radius(%)<br />",
+				"type" : "slider",
+				"value" : 45
+			},
+			"range" : 
+			{
+				"max" : 15,
+				"min" : 1,
+				"order" : 11,
+				"text" : "<br />幅度<br />range<br />",
+				"type" : "slider",
+				"value" : 9
+			},
+			"rotation" : 
+			{
+				"max" : 10,
+				"min" : -10,
+				"order" : 8,
+				"text" : "<br />旋转角度<br />Rotation angle<br />",
+				"type" : "slider",
+				"value" : 0
+			},
+			"sakuratransparency" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 2,
+				"text" : "<br />樱花透明度<br />sakura transparency<br />",
+				"type" : "slider",
+				"value" : 25
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "#7a7574"
+			},
+			"showCircle" : 
+			{
+				"order" : 3,
+				"text" : "<br />可视化音频<br />Show circle?<br />",
+				"type" : "bool",
+				"value" : true
+			},
+			"showSemiCircle" : 
+			{
+				"order" : 4,
+				"text" : "<br />显示为半圆<br />Show semi-circle?<br />",
+				"type" : "bool",
+				"value" : false
+			},
+			"showTime" : 
+			{
+				"order" : 17,
+				"text" : "<br />可视化时间<br />Show time?<br />",
+				"type" : "bool",
+				"value" : true
+			},
+			"style" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "长条",
+						"value" : 1
+					},
+					{
+						"label" : "波峰",
+						"value" : 2
+					},
+					{
+						"label" : "波峰（不连线）",
+						"value" : 3
+					}
+				],
+				"order" : 6,
+				"text" : "<br />音频样式<br />wave Style<br />",
+				"type" : "combo",
+				"value" : 1
+			},
+			"tSize" : 
+			{
+				"max" : 50,
+				"min" : 10,
+				"order" : 19,
+				"text" : "<br />时间大小<br />Time size<br />",
+				"type" : "slider",
+				"value" : 20
+			},
+			"tStyle" : 
+			{
+				"order" : 20,
+				"text" : "<br />24小时制<br />24-hour?<br />",
+				"type" : "bool",
+				"value" : true
+			},
+			"tX" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 21,
+				"text" : "<br />时间-X(%)<br />Time-X(%)<br />",
+				"type" : "slider",
+				"value" : 50
+			},
+			"tY" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 22,
+				"text" : "<br />时间-Y(%)<br />Time-Y(%)<br />",
+				"type" : "slider",
+				"value" : 50
+			},
+			"timetransparency" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 18,
+				"text" : "<br />时间透明度<br />time transparency<br />",
+				"type" : "slider",
+				"value" : 100
+			},
+			"wavetransparency" : 
+			{
+				"max" : 100,
+				"min" : 0,
+				"order" : 16,
+				"text" : "<br />可视化音频透明度<br />wave transparency<br />",
+				"type" : "slider",
+				"value" : 80
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Anime" ],
+	"title" : "蕾姆落樱效果+可视化音频可调整+支持壁纸自定义",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : 888689688
+}

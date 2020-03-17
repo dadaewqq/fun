@@ -1,0 +1,184 @@
+html, body{
+    width:100%;
+    padding: 0;
+    margin: 0;
+    font-family: l, serif;
+    --line-height: 19px;
+}
+
+body{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: var(--line-height);
+    background-color: rgb(28,27,27);
+    color: rgb(255,255,255);
+}
+
+* {
+    font-variant-ligatures: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    /*margin-top: var(--line-height);*/
+}
+
+hr {
+    display: block;
+    height: var(--line-height);
+    margin: 0;
+    padding: 0;
+    /*background-color: red;*/
+    border: none;
+}
+
+a {
+    font-family: r;
+    text-decoration: none;
+     /*color:rgb(100,200,200);*/
+    color: inherit;
+    transition: all 300ms;
+}
+
+a:hover{
+    /*color:rgb(100,200,200);*/
+}
+
+/* small */
+main{
+    left: 1ch;
+    margin-right: 1ch;
+    max-width: 42ch;
+    padding-bottom: calc(1 * var(--line-height));
+    top: calc(1 * var(--line-height));
+    box-decoration-break: slice;
+    padding-bottom: calc(4 * var(--line-height));
+    /*background-color: rgba(200,0,0,0.2);*/
+}
+
+/* larger */
+@media only screen and (min-width: 400px){
+    main{
+        left: 2ch;
+        margin-right: 2ch;
+    }
+}
+
+/* large */
+@media only screen and (min-width: 800px){
+    main{
+        left: 4ch;
+        margin-right: 4ch;
+    }
+}
+
+main,
+output{
+    position: absolute;
+    display: block;
+}
+
+output{
+    left:0;
+    right:0;
+    top:0;
+    pointer-events: none;
+    white-space: pre;
+    overflow-x: hidden;
+}
+
+output span{
+    display: block;
+}
+
+/* avoid spring & scrolling */
+.disable-scroll{
+    bottom:0;
+    overflow-y: hidden;
+    position: fixed;
+}
+
+/* Long touch hangs when selecting changing text on Safari / iOS (?)*/
+.disable-touch-select{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.hidden{
+    display: none;
+    /*opacity: 0;*/
+}
+
+.invisible {
+    color: transparent
+    /*visibility: hidden;*/
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * ertdfgcvb.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2017
+ */
+
+ /* Complete */
+
+ @font-face {
+     font-family: "l";
+     src: url("lineto-simple-light.eot");
+     src: url("lineto-simple-light.eot?#iefix") format("embedded-opentype"),
+          url("lineto-simple-light.woff2") format("woff2"),
+          url("lineto-simple-light.woff") format("woff");
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: "r";
+     src: url("lineto-simple-regular.eot");
+     src: url("lineto-simple-regular.eot?#iefix") format("embedded-opentype"),
+          url("lineto-simple-regular.woff2") format("woff2"),
+          url("lineto-simple-regular.woff") format("woff");
+     font-weight: normal;
+     font-style: normal;
+ }
+
+/* Subsetted */
+
+/*
+@font-face {
+    font-family: "l";
+    src: url("fonts_subsetted/lineto-simple-light.eot");
+    src: url("fonts_subsetted/lineto-simple-light.eot?#iefix") format("embedded-opentype"),
+         url("fonts_subsetted/lineto-simple-light.woff2") format("woff2"),
+         url("fonts_subsetted/lineto-simple-light.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "r";
+    src: url("fonts_subsetted/lineto-simple-regular.eot");
+    src: url("fonts_subsetted/lineto-simple-regular.eot?#iefix") format("embedded-opentype"),
+         url("fonts_subsetted/lineto-simple-regular.woff2") format("woff2"),
+         url("fonts_subsetted/lineto-simple-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+

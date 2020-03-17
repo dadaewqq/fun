@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ertdfgcvb</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Studio for design and code based in Lugano, Switzerland.">
+        <meta name="author" content="Andreas Gysin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="black">                            <!-- Chrome, Firefox OS and Opera -->
+        <meta name="msapplication-navbutton-color" content="black">          <!-- Windows Phone -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">  <!-- iOS Safari -->
+        <link rel="manifest" href="00/ertdfgcvb.manifest">
+        <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAAAeklEQVRoge3YsQnAIBQGYQ3ZKO7fpjGjZAYjpMgEvxzhPrD1cWL16tH7KCFXa2XEbv9s+RF5RlAYQWEEhREURlAYQWEEhREURlAYQWEERZ1nwWYoa48mzCc67x4c8PrFdzKCwggKIyiMoDCCwggKIyiMoDCCwggKIyge5XUK3+bQhpIAAAAASUVORK5CYII="  />
+        <link rel="stylesheet" href="00/main.css">
+    </head>
+    <body>
+        <main class="invisible">
+            <hr>
+            <p>
+                ertdfgcvb<br>
+                <br>
+                <br>
+            </p>
+            <hr>
+            <p>
+                Studio for design and code based in Lugano, Switzerland.
+                <br>
+                <br>
+            </p>
+            <hr>
+            <p>
+                Specialized in procedural graphic design for screen and print; conceptualization, prototyping and implementation of interactive installations for stages, events and exhibitions.<br>
+                International clientele and workshops.<br>
+                Content comes mostly from <a href="/p2/sm/play.html">here</a>.<br>
+                <br>
+            </p>
+            <hr>
+            <p>
+                Email for inquiries or just write to say<br>
+                <a href="mailto:andreas@ertdfgcvb.xyz?subject=ciao" class="swapper">ciao</a>.<br>
+                <br>
+            </p>
+            <hr>
+            <p>
+                Other activities:<br>
+                <a target="_blank" href="http://gysin-vanetti.com">gysin-vanetti.com</a><br>
+                <br>
+            </p>
+            <hr>
+            <p>
+                Archive:<br>
+                <a target="_blank" href="/p2">ertdfgcvb (2009-14)</a><br>
+                <br>
+            </p>
+           <hr>
+            <p>
+                More:<br>
+                <a target="_blank" href="https://twitter.com/andreasgysin">Twitter</a><br>
+                <a target="_blank" href="https://www.instagram.com/andreasgysin/">Instagram</a><br>
+                <a target="_blank" href="https://vimeo.com/ertdfgcvb/videos">Vimeo</a><br>
+            </p>
+        </main>
+    </body>
+    <script src="00/js.js"></script>
+    <script>
+
+        js.ert.setup( function(){
+           js.ert.track(document.querySelector('main'));
+        });
+
+        // old tiroir code
+        window.addEventListener('load', function(){
+
+            // Knuth shuffle:
+            function shuffle(array) {
+                var idx = array.length;
+                while (0 !== idx) {
+                    var r = Math.floor(Math.random() * idx);
+                    idx -= 1;
+                    var t = array[idx];
+                    array[idx] = array[r];
+                    array[r] = t;
+                }
+                return array;
+            }
+
+            var s = shuffle([
+                // ---- cheers
+                'hi',
+                'yo',
+                'ciao',
+                'viva',
+                'salut',
+                'hello',
+                'grüezi',
+                'prosit',
+                'olà olà',
+                'bonjour',
+                'namaste',
+                'guten Tag',
+                'shaba-daba',
+                'go to hell',
+                'buona notte',
+                'buenas dias',
+                'hasta la victoria',
+                'ooooooooooooooooooooh',
+                // ---- love
+                '“I love you”',
+                // '“I ♥ ♠ ♦ ♣”',
+                '“I love my cat”',
+                '“I want to be your slave”',
+                // ---- thats
+                'that life is life',
+                'that you liked your dinner',
+                'that Gilgamesh is your father',
+                'that you don’t want to write me',
+                'that it’s time for a new haircut',
+                'that sex or fox are better than fax',
+                'that it’s common to say it’s common',
+                'that aaaah is not the same as ooooh',
+                // ---- colors
+                'that blue is your favourite color',
+                'that gold is your favourite color',
+                'that gray is your favourite color',
+                // ---- numbers
+                'that four has four letters',
+                'that five has four letters',
+                'that nine has four letters',
+                'that π is close to, but not exactly 3.1415',
+                // 'that 1 one stays to 2 twos like 3 trees stay to 4 Fords',
+                // ---- animals
+                'that slick worms eat silk',
+                'that sheep sings while ship sinks',
+                'that gold is fish and golf is dish',
+                'that you saw a cat sleeping in a box',
+                'that the fly flies and the flies fly',
+                // 'that a bird’s burden is the weight of a feather',
+                // 'that bird is feather’s father but not vice-versa',
+            ]);
+
+            var c = 0;
+            function swap(){
+                c = ++c % s.length;
+                var e = document.querySelector('main .swapper');
+                //e.href = 'mailto:andreas@ertdfgcvb.com?subject=' + s[c];
+                e.innerText = s[c];
+                js.ert.refresh();
+            }
+            swap();
+            setInterval( swap, 9000);
+        });
+    </script>
+</html>
