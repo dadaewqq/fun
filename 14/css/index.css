@@ -1,0 +1,371 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 50px;
+  height: 100%;
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Navbar-brand
+ */
+
+.navbar-brand {
+  font-size: 18px;
+}
+
+#site-icon {
+  font-size: 20px;
+  top: 3px;
+}
+
+#site-icon img {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 2px;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+
+.sidebar {
+  display: none;
+}
+
+.sidebar-top {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+  .sidebar-top {
+    display: none;
+  }
+}
+
+/* Sidebar navigation */
+
+.nav-sidebar {
+  margin-right: -21px;
+  /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+.nav-sidebar>li>a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.nav-sidebar>.active>a, .nav-sidebar>.active>a:hover, .nav-sidebar>.active>a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+.navbar-nav>li>a>.menu-icon {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.nav-sidebar>li>a>.menu-icon {
+  display: inline-block;
+  margin-right: 6px;
+  text-align: center;
+  /*font-size: 18px;
+  font-weight: 400;
+  height: 18px;
+  width: 18px;*/
+}
+
+.logo {
+  display: inline-block;
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.row-fluid {
+  height: 100%;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  /* margin-bottom: 30px; */
+  text-align: center;
+}
+
+.placeholders h4 {
+  margin-bottom: 0;
+  font-size: 12px;
+  /* min-height: 42px; */
+  height: 39px;
+  overflow: hidden;
+}
+
+.placeholder, .placeholder-hot, .placeholder-new {
+  margin-bottom: 20px;
+}
+
+.placeholder img {
+  display: inline-block;
+  border-radius: 20%;
+  background-color: #428bca;
+  padding: 1.0em;
+}
+
+.placeholder-hot img {
+  background-color: #d58512;
+}
+
+.placeholder-hot h4 {
+  color: #d58512;
+}
+
+.placeholder-new img {
+  background-color: #4cae4c;
+}
+
+.placeholder-new h4 {
+  color: #4cae4c;
+}
+
+.placeholder-vip img {
+  background:url('../Images/Icons/star_filled_100px.png') #428bca no-repeat;
+  background-size: 12px;
+  background-position: 90% 90%;
+  background-origin: border-box;
+}
+
+.placeholder-vip h4 {
+  color: #428bca;
+}
+
+.placeholder-hot-vip img {
+  background:url('../Images/Icons/star_filled_100px.png') #d58512 no-repeat;
+  background-size: 12px;
+  background-position: 90% 90%;
+  background-origin: border-box;
+}
+
+.placeholder-hot-vip h4 {
+  color: #d58512;
+}
+
+.placeholder-new-vip img {
+  background:url('../Images/Icons/star_filled_100px.png') #4cae4c no-repeat;
+  background-size: 12px;
+  background-position: 90% 90%;
+  background-origin: border-box;
+}
+
+.placeholder-new-vip h4 {
+  color: #4cae4c;
+}
+
+.margintb-6 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.margin-t-36 {
+  margin-top: 36px;
+}
+
+.margin-t-18 {
+  margin-top: 18px;
+}
+
+.margin-b-18 {
+  margin-bottom: 18px;
+}
+
+.margin-t-3 {
+  margin-top: 3px;
+}
+
+.paddinglr-0 {
+  padding: 0px;
+}
+
+.width-100-percent {
+  width: 100%;
+}
+
+.min-width-100 {
+  min-width: 100px;
+}
+
+.min-width-120 {
+  min-width: 120px;
+}
+
+.min-width-150 {
+  min-width: 150px;
+  text-align: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.min-height-120 {
+  min-height: 132px;
+}
+
+/**** Coupon Search ****/
+.cs-title {
+  background-color: transparent;
+  color: #fff;
+  border-color: transparent;
+  padding-left: 0px;
+}
+
+.cs-ad-close {
+  float: right;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+/**** Tags ****/
+
+.tagsarea {
+  /* margin: 0px auto;
+	margin-top: 3px;
+	margin-bottom: 9px; */
+  padding: 6px 6px 6px 0px;
+  margin: 6px 0px 0px 0px;
+  /* border: 1px solid #ccc;
+  border-radius: 4px; */
+}
+
+.tagsarea a {
+  display: inline-block;
+  position: relative;
+  padding: 0px 10px;
+  background: #f60;
+  color: #fff;
+  line-height: 1.5;
+  margin-left: 1em;
+  /* margin-bottom: 1em; */
+  border-radius: 0;
+  font-size: 12px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.tagsarea a:hover {
+  background: gray;
+  color: white;
+}
+
+.tagsarea a:before {
+  position: absolute;
+  content: " ";
+  border: transparent 0.75em solid;
+  border-right-color: #f60;
+  top: 0;
+  left: -1.5em;
+  height: 0em;
+  width: 0em;
+}
+
+.tagsarea a:hover:before {
+  border-right-color: gray;
+}
+
+.tagsarea a:after {
+  position: absolute;
+  content: " ";
+  background: white;
+  width: 0.5em;
+  height: 0.5em;
+  top: 0.5em;
+  left: -0.125em;
+  border-radius: 0.25em;
+}
+
+.btn-collect {
+  float: right;
+  /* margin-top: 42px; */
+}
