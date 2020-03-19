@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta id="viewport" name="viewport" content="width=device-width,user-scalable=no" />
+		<script type="text/javascript" src="./21.js"></script>
+        <title>Flappy bird</title>
+		<style type="text/css">
+			body {
+				margin:0px;
+			}
+		</style>
+		<script language=javascript>
+			var mebtnopenurl = './index.html';
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		    
+		    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+		        WeixinJSBridge.invoke('sendAppMessage', {
+		            "img_url": window.shareData.imgUrl,
+		            "link": window.shareData.timeLineLink,
+		            "desc": window.shareData.tContent,
+		            "title": window.shareData.tTitle
+		        }, function(res) {
+		        	document.location.href = mebtnopenurl;
+		        })
+		    });
+
+		    WeixinJSBridge.on('menu:share:timeline', function(argv) {
+		        WeixinJSBridge.invoke('shareTimeline', {
+		            "img_url": window.shareData.imgUrl,
+		            "img_width": "1080",
+		            "img_height": "1920",
+		            "link": window.shareData.timeLineLink,
+		            "desc": window.shareData.tContent,
+		            "title": window.shareData.tTitle
+		        }, function(res) {
+		        	document.location.href = mebtnopenurl;
+		        });
+		    });
+		}, false);
+		function dp_submitScore(a,b){
+			if(a&&b>=a&&b>10){
+				//alert("新纪录哦！你过了"+b+"关!")
+				dp_share(b)
+			}
+		}
+			
+		function dp_Ranking(){
+		    document.location.href = mebtnopenurl;
+		}
+
+		</script>
+		</head>
+		
+		
+	<body>
+		<div style="text-align:center;">
+			<canvas id="linkScreen">
+				很遗憾，您的浏览器不支持HTML5，请使用支持HTML5的浏览器。
+			</canvas>
+		</div>
+	</body>
+</html>
