@@ -672,6 +672,8 @@
             if (e.target != this.detailsButton) {
                 if (!this.crashed && (Runner.keycodes.JUMP[e.keyCode] ||
                     e.type == Runner.events.TOUCHSTART)) {
+                    var box = document.getElementById("messageBox");
+                    box.style.visibility="hidden";
                     if (!this.playing) {
                         this.loadSounds();
                         this.playing = true;
