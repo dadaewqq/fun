@@ -1,178 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<title>在线代码着色工具</title>
-<script src="./statics/js/jquery-1.8.3.min.js"></script>
+<title>在word中优雅展现的代码</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="代码高亮,word,微软word高亮代码,word中美化代码" />
+<meta name="description" content="在线生成可以在word中高亮的代码，支持各类主流语言，代码美化，代码高亮。" />
+<script type="text/javascript" src="./csslessjs/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="./SyntaxHighlighter/SyntaxHighlighter.css">
+<script language="javascript" src="./SyntaxHighlighter/shCore.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushCpp.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushCSharp.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushCss.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushDelphi.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushJava.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushJScript.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushPhp.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushPython.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushRuby.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushSql.js"></script>
+<script language="javascript" src="./SyntaxHighlighter/shBrushVb.js"></script> 
+<script language="javascript" src="./SyntaxHighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./csslessjs/clipboard.min.js"></script> 
+<script type="text/javascript" src="./csslessjs/bootstrap.min.js"></script> 
+<link href="./csslessjs/show.css" rel="stylesheet" type="text/css">
 </head>
+
+
 <body>
-<link id="css" rel="stylesheet" type="text/css" href="css/shCoreDefault.css"/>
-<script src="js/shCore.js"></script>
-<script src="js/shBrushAll.js"></script>
-<script>
- var cookieOptions = {
-    hoursToLive: 30 * 24
-  }
-var REGX_HTML_ENCODE = /"|&|'|<|>|[\x00-\x20]|[\x7F-\xFF]|[\u0100-\u2700]/g;
-function encodeHtml(s){
-      return (typeof s != "string") ? s :
-          s.replace(REGX_HTML_ENCODE,
-                    function($0){
-                        var c = $0.charCodeAt(0), r = ["&#"];
-                        c = (c == 0x20) ? 0xA0 : c;
-                        r.push(c); r.push(";");
-                        return r.join("");
-                    });
-}
-function change(type){    //更改样式
-    var css=document.getElementById("css"); 
-    if ("default"==type)
-    	css.setAttribute("href","css/shCoreDefault.css"); 
-    if ("emacs"==type)
-    	css.setAttribute("href","css/shCoreEmacs.css"); 
-	if ("django"==type)
-    	css.setAttribute("href","css/shCoreDjango.css");
-	if ("eclipse"==type)
-    	css.setAttribute("href","css/shCoreEclipse.css");
-	if ("fadetogrey"==type)
-    	css.setAttribute("href","css/shCoreFadeToGrey.css");
-	if ("mdultra"==type)
-    	css.setAttribute("href","css/shCoreMDUltra.css");
-	if ("midnight"==type)
-    	css.setAttribute("href","css/shCoreMidnight.css");
-	if ("rdark"==type)
-    	css.setAttribute("href","css/shCoreRDark.css");
-	render();
-} 
+  <style>
+    body {
+      padding-top: 5px;
+    }
 
-$(document).ready(function (){
-	$("#html_div").hide();
-	SyntaxHighlighter.all();
-	$(":radio").click(function (){
-		change($(this).val());	
-	});
-	$("#to_html").click(function (){
-    	if($("#to_html").attr("checked")){
-			toHTML();
-    		$("#html_div").show();
-		}
-    	else{
-    		$("#html_div").hide();
-		}
-	});
-	$("#gutter").click(function (){
-		render();
-	});
-});
+    hr.divider {
+      margin: 5px 0;
+    }
+ 
 
-function render(){
-	$("#result_div").empty();
-	$("#result_div").prepend("<pre>"+encodeHtml($("#code_source").val())+"</pre>");
-	var class_v="brush :"+$("#code_type").val()+";";
-	if("checked"!=$("#gutter").attr("checked"))
-		class_v=class_v+"gutter: false;";
-	$("#result_div pre").addClass(class_v);
-	SyntaxHighlighter.highlight();
-	toHTML();
-}
-function toHTML(){
-	var html="<link rel='stylesheet' type='text/css' href='http://chaping.github.io/highlight/";
-	html=html+$("#css").attr("href");
-	html=html+"'/>";
-	html=html+$(".syntaxhighlighter").parent().html();
-	$("#html_div textarea").val(html);
-	if($("#to_html").attr("checked"))
-	{
-		$("#html_div").show();
-	}
-	else{
-		$("#html_div").hide();
-	}
-}
-</script>
-<div id="mainContent" class="tool_content wrapper" style="width:1000px; margin:0 auto;">
-	<div class="toolName" style="color:#5B1E2F; font-size:16px; margin:10px;"><strong>在线代码着色(采用SyntaxHighlighter实现)</strong></div>
-	<div class="toolUsing clearfix">
-	</div>
-	<div class="topBar">
-    <textarea id="code_source" style="width:98%; overflow:auto; height:150px; box-shadow:0 1px 1px inset rgba(0,0,0,0.075); border-radius:3px;">
-/* ---示例代码----*/
+    .pre-scrollable {
+      max-height: 500px;
+      overflow-y: scroll;
+    }
+    .row {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
+    .navbar {
+    background-color: rgb(77, 193, 255);
+  
+   }
+  
+  </style>
 
-function echo (){
 
-	var a="this is a example";
-	
-	alert("hello world "+a);
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="navbar navbar-default navbar-static-top navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"  style="color:rgb(251, 251, 255)"  href="#"><span>SyntaxHighlighter</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-}
 
-/* ---示例代码----*/
-	</textarea>
-	</div>
-	<div class="operateTB">
-		<form class="form-inline">
-			<select id="code_type" class="span2">
-    			<option value="js">Javascript</option>
-				<option value="xml">HTML/XML</option>
-    			<option value="java">Java</option>
-    			<option value="c">C/C++/Objectiv-C</option>
-    			<option value="ruby">Ruby</option>
-    			<option value="csharp">C#</option>
-    			<option value="css">CSS</option>
-    			<option value="delphi">Delphi</option>
-    			<option value="erlang">Erlang</option>
-    			<option value="groovy">Groovy</option>
-    			<option value="javafx">JavaFX</option>
-    			<option value="perl">Perl</option>
-    			<option value="php">PHP</option>
-    			<option value="powershell">PowerShell</option>
-    			<option value="python">Python</option>
-    			<option value="scala">Scala</option>
-    			<option value="sql">SQL</option>
-    			<option value="vb">VB</option>
-    		      			<option value="as3">AS3</option>
-    			<option value="bash">Bash</option>
-    			<option value="coldfusion">ColdFusion</option>
-    			<option value="diff">Diff</option>
-    			<option value="plain">Plain</option>
-    			<option value="sass">Sass</option>
-			</select>
-            <label class="checkbox"><input type="checkbox" id="gutter" checked="checked"/>显示行号</label>
-			<label class="checkbox"><input type="checkbox" id="to_html"/>生成HTML</label>
-			<button type="button" class="btn btn-primary" onClick="render();"><i class="icon-chevron-down icon-white"></i>语法着色</button><p>
-    		<label class="radio"><input type="radio" name="higilight_style" checked="checked" value="default"/>默认样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="emacs"/>Emacs样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="eclipse"/>Eclipse样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="django"/>Django样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="fadetogrey"/>FadeToGrey样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="mdultra"/>MDUltra样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="midnight"/>Midnight样式</label>
-    		<label class="radio"><input type="radio" name="higilight_style" value="rdark"/>RDark样式</label>
-		</form>
-	</div>
-	<div class="bottomBar clearfix">
-		<div id='html_div'>
-			<textarea id='html' onclick='this.focus();this.select();' style="width:100%; overflow:auto; height:100px; box-shadow:0 1px 1px inset rgba(0,0,0,0.075); border-radius:3px;">
-			</textarea>
-		</div>
-		<div id="result_div">
-    	<pre class='brush: js;'>
-/* ---示例代码----*/
+    <div class="section">
 
-function echo (){
 
-	var a="this is a example";
-	
-	alert("hello world "+a);
+      <main class="row-fluid" style="height:85%;min-height:600px;">
+        <div class="col-md-5" style="padding:0px;height:100%;">
+          <div class="numberedtextarea-wrapper ">
+            <textarea id="srccode" placeholder="此处输入源码，选择语言后点击高亮按钮，右侧结果复制粘贴到word中即可."  class="form-control common-font-size" style="height:100%;height: 87vh;min-height:600px;padding:10px 10px 10px 30px;border:0;border-right:solid 1px #E5EBEE;border-bottom:solid 1px #eee;border-radius:0;resize: none; outline:none;"></textarea>
+ 
+          </div>
+        </div>
 
-}
+        <div class="col-md-7" style="padding:0;position:relative;height:100%;">
 
-/* ---示例代码----*/
-    	</pre>
-		</div>
+          <div class="form-group form-group-sm">
+ 
+            <label class="col-sm-2 control-label" for="formGroupInputSmall">选择语言：</label>
+            <div class="col-sm-2" style="padding-left: 1px;margin-left: 1px;">
+              <select name="fonts" id="languageSelected" class="form-control">
+                <option value="c++">C, C++</option>                                                        
+                <option value="c#">C#</option>                                                        
+                <option value="css">CSS</option>                                                        
+                <option value="delphi">Delphi, Pascal</option>                                                        
+                <option value="xml">XML</option>                                                                                                                
+                <option value="java">Java</option>                                                                                                                                                                        
+                <option value="javascript">Javascript</option>                                                                                                                                                                                                                                
+                <option value="php">PHP</option>                                                        
+                <option value="python">Python</option>                                                        
+                <option value="ruby">Ruby</option>                                                        
+                <option value="sql">SQL</option>                                                        
+                <option value="vb">VB</option>                                                        
+                <option value="xml">HTML</option>   
+              </select>
+            </div>
+    
+          
+            <div class="form-group form-group-sm">
+              <a class="btn btn-primary" style="margin-right:15px;margin-bottom:-5px;" id="startExecute"   onclick="formatcode()">高亮</a>
+             </div>
+          </div>
 
-	</div>
-</div>
+        
+          <div id="right-box" class="common-font-size" style="width:100%;height: 87vh;min-height:520px;border:solid 1px #f6f6f6;border-radius:0;resize: none;overflow-y:scroll; outline:none;position:relative;padding-top:5px;">
+             <div class="ro" id="formatcode" style="padding:0px 25px;white-space: pre-line;word-wrap:break-word;">
+             </div>
+          </div>
+
+        </div>
+
+      </main>
+
+
+    </div>
+  </div>
+
+ 
+ 
+  <script language="javascript">
+
+    var divA = document.getElementById("formatcode");
+    var innerHtml = ' <textarea name="code" id="code"  class="c++">   ';
+    innerHtml = innerHtml +  $("#srccode").val() + '</textarea>';
+    divA.innerHTML = innerHtml;
+    dp.SyntaxHighlighter.HighlightAll('code', true,false); 
+
+    function formatcode()
+    {
+        var srcCode = document.getElementById("srccode");
+        var divA = document.getElementById("formatcode");
+        var innerHtml = ' <textarea name="code" id="code"  class="' +  $("#languageSelected").val() + '">   ';
+        innerHtml = innerHtml +  $("#srccode").val() + '</textarea>';
+        divA.innerHTML = innerHtml;
+        dp.SyntaxHighlighter.HighlightAll('code', true,false);
+    }
+
+  </script>
+
+
+
+
+    <script language="javascript">
+    var clipboard = new ClipboardJS('.copyBtn', {
+    text: function() {
+        //var codeContent= document.getElementsById('format-code'); 
+        return  $("#formatcode").val();;
+        }
+    });
+
+    clipboard.on('success', function(e) {
+        alert("复制成功！");
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+      alert("复制失败！");
+        console.log(e);
+    });
+
+   </script>
 
 </body>
+
 </html>
