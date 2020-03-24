@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Polyvia</title>
+
+<style type="text/css" rel="stylesheet">
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#source-img, #img-path {
+    display: none;
+}
+.msg {
+    background-color: #22C3AA;
+    color: #333;
+    padding: 3px 8px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+#info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
+    z-index: 10;
+    text-align: right;
+}
+h1 {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+h3 {
+    margin-bottom: 2rem;
+}
+p {
+    margin: 0.75rem 0;
+}
+a {
+    color: #157a6b;
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<input id="img-path" type="file">
+
+<script type="text/javascript" src="build/lib.js"></script>
+
+<script type="text/javascript" src="build/image.js"></script>
+
+</body>
+
+</html>
