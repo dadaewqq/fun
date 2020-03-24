@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+div, span, p, a, img, footer, html, body, button, h1, h2, h3, h4, h5, input {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.anim-trans {
+    -webkit-transition: .3s ease all;
+       -moz-transition: .3s ease all;
+         -o-transition: .3s ease all;
+            transition: .3s ease all;
+}
+
+/* 鼠标指针箭头 */
+#arrow {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+/* 关于按钮 */
+.about {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 1.5em;
+    border-radius: .75em;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    background-color: rgba(0,0,0,.05);
+    cursor: pointer;
+}
+.about:hover {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+/*弹窗层*/  
+.mk-pop-box {   
+    z-index: 9999;
+    margin-bottom: 2px;   
+    display: none;   
+    position: fixed;
+    font-size: 14px;
+    width: 100%;
+    max-width: 350px;
+}
+.mk-pop-box-inner {
+    background: #fff;
+    border-radius: 3px;
+    border-top: 2px solid #fa7f40;
+    padding: 18px;
+}
+/* 弹窗标题 */
+.mk-pop-box-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 10px;
+}
+/* 弹窗主体内容 */
+.mk-pop-box-content {
+    margin-bottom: 13px;
+}
+.mk-pop-box-content p, .mk-pop-box-content p a {
+    font-size: 14px;
+    color: #808080;
+    text-decoration: none;
+    line-height: 20px;
+    line-height: 1.6em;
+    margin-bottom: 10px;
+}
+.mk-pop-box-content p a:hover { 
+    color: #fa7f40;
+}
+/* 弹窗中的按钮 */
+.mk-pop-box-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    min-width: 50px;
+    outline: none;
+    text-align: center;
+    border-radius: 2px;
+    display: block;
+    height: 34px;
+    line-height: 35px;
+    padding: 0 40px;
+    font-size: 14px;
+    background: #ff8140;
+    border: 1px solid #f77c3d;
+    color: #fff;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+.mk-pop-box-btn:hover {
+    background: #f7671d;
+    border: 1px solid #f06923;
+}
+/* 弹窗遮罩层 */  
+.mk-pop-box:before {
+    content: "";
+    color: #C7EDCC;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.59;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 59);
+    filter: alpha(opacity = 59);
+    z-index: -1;
+} 
+
+/* 页面主体部分 */  
+.container {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 大标题 */
+.title {
+    padding-top: 100px;
+    padding-bottom: 26px;
+}
+.baidu-logo {
+    height: 100px;
+    margin-bottom: -20px;
+}
+
+/* 搜索表单 */
+.mk-search-form {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+.mk-search-form input {
+    float: left;
+    padding: 0 6px;
+    width: 77%;
+    height: 37px;
+    border: 1px solid #d8d8d8;
+    border-right-color: transparent;
+    line-height: 37px;
+    font-size: 1em;
+}
+.mk-search-form input:focus {
+    border: 1px solid #3385ff;
+    border-right-color: transparent;
+    outline: none;
+}
+.mk-search-form button {
+    cursor: pointer;
+    border: none;
+    background-color: #3385ff;
+    color: white;
+    position: relative;
+    overflow: visible;
+    width: 23%;
+    height: 37px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.mk-search-form button:hover {
+    background-color: #317ef3;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+/* 提示语 */
+#instructions { 
+    display: inline-block;
+    margin-top: 40px;
+    padding: 30px 2px;
+    color: #999999;
+    font-size: 20px;
+}
+
+/* 生成输出框 */
+#output-box {
+    display: none;
+}
+.btn {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    line-height: 38px;
+    margin: 0 10px;
+    background-color: #3385ff;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+/*链接框*/
+#output-link {
+    width: 300px;
+    height: 30px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+/* 页脚 */
+.copyright, .copyright a {
+    color: #999;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 响应式优化 */
+@media screen and (max-width: 666px) {  
+    .title {
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 100px;
+    }
+    
+    .baidu-logo {
+        height: 50px;
+        margin: 0 5px -8px;
+    }
+
+    .mk-search-form {
+        font-size: 14px;
+    }
+    
+    #instructions {
+        font-size: 14px;
+    }
+
+    #output-box {
+        margin-top: 30px;
+    }
+    /* 链接框 */
+    #output-link {
+        width: 100%;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        vertical-align: middle;
+    }
+}
