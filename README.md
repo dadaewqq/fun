@@ -56,9 +56,9 @@
 
 <a href="https://dadaewqq.github.io/fun/26/" target="_blank"> Pornhub style </a>   
 
-<a href="https://dadaewqq.github.io/fun/27/" target="_blank"> bv2av </a>   
+<a href="https://dadaewqq.github.io/fun/27/" target="_blank"> bv2av_1 </a>   
 
-<a href="https://dadaewqq.github.io/fun/27_A/" target="_blank"> bv2av </a>   
+<a href="https://dadaewqq.github.io/fun/27_A/" target="_blank"> bv2av_2 </a>   
 
 <a href="https://dadaewqq.github.io/fun/28/" target="_blank"> 中国传统色 </a>   
 
