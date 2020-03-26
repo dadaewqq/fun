@@ -1,0 +1,38 @@
+<div class="home">
+<div class="text-center">
+
+    <div class="vertical-space"></div>
+    <h1><a href="./#/home">DownGit</a></h1>
+    <div class="center-row"></div>
+    <h4>创建 GitHub 资源下载链接</h4>
+    
+    
+    <div class="vertical-space"></div>
+    <div class="col-md-6 center-row">
+        <input name="url" type="url" placeholder="请输入Github文件或者Github文件夹链接" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
+    </div>
+    <div class="btn-group center-row">
+        <button type="button" class="btn btn-default" ng-click="createDownLink()">创建下载链接</button>
+        <button type="button" class="btn btn-default" ng-click="download()">下载</button>
+    </div>
+    
+    
+    <div ng-show="isProcessing.val">
+        <div class="vertical-space"></div>
+        <img class="processing-img" src="res/images/processing.gif" />
+        <p>Downloaded {{downloadedFiles.val}} of {{totalFiles.val}} files</p>
+    </div>
+    
+    
+    <div class="col-md-6 center-row" ng-show="downUrl">
+        <div class="vertical-space"></div>
+        <textarea class="form-control download-link-box" ng-model="downUrl" ></textarea>
+    </div>
+    
+    <div class="vertical-space"></div>
+    <div class="footer">
+          原作者 @ <a target="_blank" href="https://github.com/MinhasKamal">Minhas Kamal</a>
+    </div>
+    
+</div>
+</div>
