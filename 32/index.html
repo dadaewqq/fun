@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML5 Audio Spectrum Visualizer">
+        <title> Audio visualizer</title>
+        <link type="text/css" rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="fileWrapper" class="file_wrapper">
+                <div id="info">
+                    HTML5频谱 | An Audio Viusalizer
+                </div>
+                <label for="uploadedFile">拖拽或选择一个音频文件播放 | Drag or select a file to play:</label>
+                <input type="file" id="uploadedFile"></input>
+            </div>
+            <div id="visualizer_wrapper">
+                <canvas id='canvas' width="800" height="350"></canvas>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/html5_audio_visualizer.js"></script>
+    </body>
+</html>
