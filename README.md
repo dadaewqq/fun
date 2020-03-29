@@ -50,7 +50,7 @@
 
 <a href="https://dadaewqq.github.io/fun/23/" target="_blank"> 俄罗斯方块 </a>   
 
-<a href="https://dadaewqq.github.io/fun/24/" target="_blank"> 虚假截图(待修改) </a>   
+<a href="https://dadaewqq.github.io/fun/24/" target="_blank"> 虚假截图 </a>   
 
 <a href="https://dadaewqq.github.io/fun/25/" target="_blank"> 罗盘时钟 </a>   
 
