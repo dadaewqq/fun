@@ -42,9 +42,9 @@
 
 <a href="https://dadaewqq.github.io/fun/20/" target="_blank"> 口红颜色可视化 </a>   
 
-<a href="https://dadaewqq.github.io/fun/21/" target="_blank"> Polyvia_图片(待修改) </a>   
+<a href="https://dadaewqq.github.io/fun/21/" target="_blank"> Polyvia_图片 </a>   
 
-<a href="https://dadaewqq.github.io/fun/21_A/" target="_blank"> Polyvia_视频(待修改) </a>   
+<a href="https://dadaewqq.github.io/fun/21_A/" target="_blank"> Polyvia_视频 </a>   
 
 <a href="https://dadaewqq.github.io/fun/22/" target="_blank"> 代码着色 </a>   
 
@@ -62,7 +62,7 @@
 
 <a href="https://dadaewqq.github.io/fun/28/" target="_blank"> 中国传统色 </a>   
 
-<a href="https://dadaewqq.github.io/fun/29/" target="_blank"> 日本传统色(待修改) </a>   
+<a href="https://dadaewqq.github.io/fun/29/" target="_blank"> 留个白 </a>   
 
 <a href="https://dadaewqq.github.io/fun/30/" target="_blank"> 下载Github文件夹 </a>   
 
