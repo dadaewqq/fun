@@ -1,0 +1,4 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"music-btn"},[_c('router-link',{attrs:{"to":"/music/playlist","tag":"span"}},[_vm._v("正在播放")]),_c('router-link',{attrs:{"to":"/music/toplist","tag":"span"}},[_vm._v("推荐")]),_c('router-link',{attrs:{"to":"/music/search","tag":"span"}},[_vm._v("搜索")]),_c('router-link',{staticClass:"none-414",attrs:{"to":"/music/userlist","tag":"span"}},[_vm._v("我的歌单")]),_c('router-link',{attrs:{"to":"/music/historylist","tag":"span"}},[_vm._v("我听过的")])],1)}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

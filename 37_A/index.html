@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="mengkun">
+    <meta name="generator" content="KodCloud">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes"><!--UC强制全屏-->
+    <meta name="browsermode" content="application"><!--UC应用模式-->
+    <meta name="x5-fullscreen" content="true"><!--QQ强制全屏-->
+    <meta name="x5-page-mode" content="app"><!--QQ应用模式-->
+    
+    <title>♫ 老D在线音乐播放器</title>
+    <meta name="description" content="老D在线音乐播放器，具有音乐搜索、播放、下载、歌词同步显示、个人音乐播放列表同步等功能，支持网易云音乐、QQ音乐、虾米音乐、酷狗音乐、百度音乐在线搜索、播放、下载、支持外链。"/>
+    <meta name="keywords" content="老D音乐,在线音乐播放器,网易云音乐,音乐api,音乐外链,音乐播放器源代码"/>
+    
+    <!-- 不支持IE8及以下版本浏览器 -->
+    <!--[if lte IE 8]>
+        <script>window.location.href="plugns/killie/"</script>
+    <![endif]--> 
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/player.css">
+    <link rel="stylesheet" type="text/css" href="css/small.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="plugns/layer/skin/default/layer.css?v=3.0.2302" id="layuicss-skinlayercss">
+</head>
+<body>
+
+<div id="blur-img"></div>
+<div class="header">
+    <div class="logo" title="♫ 老D在线音乐播放器">
+        ♫ 老D在线音乐播放器
+    </div>
+</div>  <!--class="header"-->
+<div class="center">
+    <div class="container">
+        <div class="btn-bar">
+            <div class="btn-box" id="btn-area">
+                <span class="btn" data-action="player" hidden>播放器</span>
+                <span class="btn" data-action="playing" title="正在播放列表">正在播放</span>
+                <span class="btn" data-action="sheet" title="音乐播放列表">播放列表</span>
+                <span class="btn" data-action="search" title="点击搜索音乐">歌曲搜索</span>
+            </div>
+        </div>  <!--class="btn-bar"-->
+        
+        <div class="data-area">
+            <div id="sheet" class="data-box" hidden></div>
+            <div id="main-list" class="music-list data-box"></div>
+        </div>  <!--class="data-area"-->
+        <div class="player" id="player">
+            <div class="cover">
+                <img src="images/player_cover.png" class="music-cover" id="music-cover">
+            </div>
+            <div class="lyric">
+                <ul id="lyric"></ul>
+            </div>
+            <div id="music-info" title="点击查看歌曲信息"></div>
+        </div>
+    </div>  <!--class="container"-->
+</div>  <!--class="center"-->
+<div class="footer">
+    <div class="container">
+        <div class="con-btn">
+            <a href="javascript:;" class="player-btn btn-prev" title="上一首"></a>
+            <a href="javascript:;" class="player-btn btn-play" title="暂停/继续"></a>
+            <a href="javascript:;" class="player-btn btn-next" title="下一首"></a>
+			<a href="javascript:;" class="player-btn btn-order" title="循环控制"></a>
+        </div>  <!--class="con-btn"-->
+        
+        <div class="vol">
+            <div class="quiet">
+                <a href="javascript:;" class="player-btn btn-quiet" title="静音"></a>
+            </div>
+            <div class="volume">
+                <div class="volume-box">  
+                    <div id="volume-progress" class="mkpgb-area"></div>
+                </div>
+            </div>
+        </div>  <!--class="footer"-->
+        
+        <div class="progress">
+            <div class="progress-box">  
+                <div id="music-progress" class="mkpgb-area"></div>
+            </div>
+        </div>  <!--class="progress"-->
+    </div>  <!--class="container"-->
+</div>  <!--class="footer"-->
+<script src="plugns/layer/layer.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/lyric.js"></script>
+<script src="js/musicList.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/player.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/background-blur.min.js"></script>
+
+<span style="display: none">
+
+</span>
+
+</body>
+</html>

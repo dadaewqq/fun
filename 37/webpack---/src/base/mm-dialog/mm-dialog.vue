@@ -1,0 +1,4 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"mm-dialog-fade"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.dialogShow),expression:"dialogShow"}],staticClass:"mm-dialog-box"},[_c('div',{staticClass:"mm-dialog-wrapper"},[_c('div',{staticClass:"mm-dialog-content"},[_c('div',{staticClass:"mm-dialog-head",domProps:{"textContent":_vm._s(_vm.headText)}}),_vm._t("default",[_c('div',{staticClass:"mm-dialog-text",domProps:{"innerHTML":_vm._s(_vm.bodyText)}})]),_c('div',{staticClass:"mm-dialog-btns"},[(_vm.dialogType!=='alert')?_c('div',{staticClass:"mm-btn-cancel",domProps:{"textContent":_vm._s(_vm.cancelBtnText)},on:{"click":_vm.cancel}}):_vm._e(),_vm._t("btn"),_c('div',{staticClass:"mm-btn-confirm",domProps:{"textContent":_vm._s(_vm.confirmBtnText)},on:{"click":_vm.confirm}})],2)],2)])])])}
+var staticRenderFns = []
+
+export { render, staticRenderFns }

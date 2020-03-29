@@ -1,0 +1,4 @@
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"userList"},[_c('mm-loading',{model:{value:(_vm.mmLoadShow),callback:function ($$v) {_vm.mmLoadShow=$$v},expression:"mmLoadShow"}}),(_vm.list.length>0)?_vm._l((_vm.formatList),function(item){return _c('div',{key:item.id,staticClass:"list-item",attrs:{"title":item.name}},[_c('router-link',{staticClass:"userList-item",attrs:{"to":{path:("/music/details/" + (item.id))},"tag":"div"}},[_c('img',{directives:[{name:"lazy",rawName:"v-lazy",value:(((item.coverImgUrl) + "?param=200y200")),expression:"`${item.coverImgUrl}?param=200y200`"}],staticClass:"cover-img"}),_c('h3',{staticClass:"name"},[_vm._v(_vm._s(item.name))])])],1)}):_c('mm-no-result',{attrs:{"title":"啥也没有哦，快去登录看看吧！"}})],2)}
+var staticRenderFns = []
+
+export { render, staticRenderFns }
