@@ -1,0 +1,388 @@
+<!doctype html>
+
+<html class="no-js">
+
+    
+<head>
+        
+<meta charset="utf-8">
+
+<!--敬告开发者：
+我们已经开源部分代码，官网已经标明。
+但是，未开源的部分，请不要有非分之心。
+
+我们做了以下措施避免你的非分之心。
+    前端部分
+    -JS 
+    --压缩->机器可读但人不易理解的代码;变量名替换为无意义名;去除注释
+    --加密->限制非开发环境的浏览器控制台调试(F12);运行环境校验;混淆处理
+    -CSS等
+    --压缩->减少开销
+    后端部分
+    -SSH:IP白名单连接;2步验证;18位高强度密码。
+    -PHP:Session 隔离;禁止上传;禁用高危函数;PHP文件单独加密。
+    -Nginx:禁止上传
+    -Other:禁用外网连接;统一使用24位混合密码
+    -防火墙:服务器提供商的防火墙 + 操作系统防火墙。
+    -文件管理:555权限;无开发环境代码
+Love you.    
+-->
+
+<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+<meta name="renderer" content="webkit">
+
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta http-equiv="Pragma" content="no-cache" />
+
+<link rel="search" type="application/opensearchdescription+xml" href="/static/opensearch.xml" title="Music">
+
+<meta name="theme-color" content="#1E9FFF">
+
+
+<!--
+<script async src="./music.cdn.qcloud.qugeek.com/static/main.js">
+</script>
+-->
+
+<script>
+ keywords = "q"+"u"+"g"+"e" + "e" + "k"
+</script>    
+            
+<title>
+Rainy
+</title>
+        
+<meta name="Description" content="只有雨。"/>
+        
+<meta name="Keywords" content="白噪音,白噪音在线,在线雨声,墨灵音乐"/>
+        
+<style>
+            html,
+            body {
+                height: 100%;
+            }
+            
+            html {
+                color: #222;
+                line-height: 1.4;
+            }
+            
+            body {
+                margin: 0;
+                background-position: center;
+                background-size: auto 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: #000;
+                font-size: 20px;
+                color: #fff;
+            }
+            
+            
+            .nobr {
+                white-space: nowrap;
+            }
+            
+            * {
+                font-family:serif;
+                text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+            }
+            
+            
+            img {
+                border: 0;
+                vertical-align: middle;
+            }
+            
+            
+            a {
+                color: #fff;
+            }
+            
+            .PT {
+                color: #444;
+            }
+            
+            a.PT {
+                color: #444;
+            }
+            
+            h1,
+            h2 {
+                margin: 0;
+                cursor: default;
+            }
+            
+            h1 {
+                font-size: 80px;
+                line-height: 80px;
+            }
+            
+            h2 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            
+            p {
+                cursor: default;
+            }
+            
+            .center-container {
+                width: 100%;
+                height: 100%;
+                overflow: visible;
+                text-align: center;
+            }
+            
+            .center-container:after,
+            .center-block {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            .center-container:after {
+                content: '';
+                height: 100%;
+                margin-left: -0.25em;
+            }
+            
+            .center-block {
+                max-width: 98%;
+            }
+            /* media queries */
+            
+            @media only screen and (max-width: 550px) {
+                h1 {
+                    font-size: 45px;
+                    line-height: 45px;
+                }
+                h2 {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                body {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+            }
+            /* New Audio Button 2018 */
+            
+            #audioplayerskin {
+                width: 300px;
+                height: auto;
+                margin: auto auto 20px auto;
+                text-align: center;
+                background-color: rgba(5, 173, 13, 0.49);
+                background-color: transparent;
+            }
+            
+            #pButton {
+                height: 130px;
+                width: 130px;
+                border: none;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                outline: none;
+            }
+            
+            .play {
+                background: url('./music.cdn.qcloud.qugeek.com/static/onlyrain/img/play4.png');
+            }
+            
+            .pause {
+                background: url('./music.cdn.qcloud.qugeek.com/static/onlyrain/img/pause4.png');
+            }
+            
+            #volume_control {
+                margin: auto;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding-top: 0px;
+                padding-bottom: 0px;
+                width: 50%;
+            }
+            /* range style from http://danielstern.ca/range.css/#/ */
+            /* the IE thumb was modified to look square */
+            
+            input[type=range] {
+                -webkit-appearance: none;
+                width: 100%;
+                margin: 6.05px 0;
+            }
+            
+            input[type=range]:focus {
+                outline: none;
+            }
+            
+            input[type=range]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 2.9px;
+                cursor: pointer;
+                box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+                background: #ffffff;
+                border-radius: 0px;
+                border: 0px solid #000000;
+            }
+            
+            input[type=range]::-webkit-slider-thumb {
+                box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+                border: 0px solid #ffffff;
+                height: 15px;
+                width: 15px;
+                border-radius: 50px;
+                background: #ffffff;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -6.05px;
+            }
+            
+            input[type=range]:focus::-webkit-slider-runnable-track {
+                background: #ffffff;
+            }
+            
+            input[type=range]::-moz-range-track {
+                width: 100%;
+                height: 2.9px;
+                cursor: pointer;
+                box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+                background: #ffffff;
+                border-radius: 0px;
+                border: 0px solid #000000;
+            }
+            
+            input[type=range]::-moz-range-thumb {
+                box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+                border: 0px solid #ffffff;
+                height: 15px;
+                width: 15px;
+                border-radius: 50px;
+                background: #ffffff;
+                cursor: pointer;
+            }
+            
+            input[type=range]::-ms-track {
+                width: 100%;
+                height: 2.9px;
+                cursor: pointer;
+                background: transparent;
+                border-color: transparent;
+                color: transparent;
+            }
+            
+            input[type=range]::-ms-fill-lower {
+                background: #f2f2f2;
+                border: 0px solid #000000;
+                border-radius: 0px;
+                box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+            }
+            
+            input[type=range]::-ms-fill-upper {
+                background: #ffffff;
+                border: 0px solid #000000;
+                border-radius: 0px;
+                box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+            }
+            
+            input[type=range]::-ms-thumb {
+                box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+                border: 0px solid #ffffff;
+                height: 15px;
+                width: 15px;
+                border-radius: 0px;
+                background: #ffffff;
+                cursor: pointer;
+                height: 17.9px;
+                /* was 2.9px */
+            }
+            
+            input[type=range]:focus::-ms-fill-lower {
+                background: #ffffff;
+            }
+            
+            input[type=range]:focus::-ms-fill-upper {
+                background: #ffffff;
+            }
+        
+</style>
+    
+</head>
+
+    
+<body style="background-image:url('./music.cdn.qcloud.qugeek.com/static/onlyrain/img/75.jpg');">
+        
+<div class="center-container">
+            
+<div class="center-block">
+                
+<div id="audioplayerskin">
+                    
+<button id="pButton" class="play" onclick="playAudio()">
+</button>
+                    
+<div id="volume_control">
+                        
+<input type="range" oninput="setVolume(this.value)" onchange="setVolume(this.value)" id="rngVolume" min="0" max="1" step="0.01" value="1">
+                    
+</div>
+                
+</div>
+                
+<audio id="audioplayer" loop="loop">
+                    
+<source mute src="./music.cdn.qcloud.qugeek.com/static/onlyrain/audio/0.mp4" type="audio/mp4" />
+                
+</audio>
+                
+<script>
+
+                    var music = document.getElementById('audioplayer');
+
+                    function playAudio() {
+                        if(music.paused) {
+                            music.play();
+                            pButton.className = "";
+                            pButton.className = "pause";
+                        } else {
+                            music.pause();
+                            pButton.className = "";
+                            pButton.className = "play";
+                        }
+                    }
+
+                    function setVolume(volume) {
+                        music.volume = volume;
+                    }
+                
+</script>
+                
+<h1>Rainy
+</h1>
+                
+<p>
+                    帮助你来放松、专注或者睡眠
+                
+</p>
+                
+<p><br>F11 进入全屏
+
+                
+</p>
+            
+</div>
+        
+</div>
+        
+    
+</body>
+
+
+</html>
