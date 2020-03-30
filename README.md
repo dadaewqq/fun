@@ -16,11 +16,11 @@
 
 <a href="https://dadaewqq.github.io/fun/09/" target="_blank"> 奔跑的猫 </a>  
 
-<a href="https://dadaewqq.github.io/fun/10/" target="_blank"> MD editor1 </a>  
+<a href="https://dadaewqq.github.io/fun/10/" target="_blank"> MD editor_1 </a>  
 
-<a href="https://dadaewqq.github.io/fun/10_A/" target="_blank"> MD editor2 </a>  
+<a href="https://dadaewqq.github.io/fun/10_A/" target="_blank"> MD editor_2 </a>  
 
-<a href="https://dadaewqq.github.io/fun/10_B/" target="_blank"> MD editor3 </a>  
+<a href="https://dadaewqq.github.io/fun/10_B/" target="_blank"> MD editor_3 </a>  
 
 <a href="https://dadaewqq.github.io/fun/11/" target="_blank"> 零宽字符 </a>  
 
