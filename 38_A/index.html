@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>在线二维码生成器 </title>
+        <link rel='stylesheet' id='wpProQuiz_front_style-css' href='./wp-content/plugins/Wp-Pro-Quiz/css/wpProQuiz_front.min.css?ver=0.37' type='text/css' media='all'/>
+        <meta name="keywords" content="在线二维码生成器">
+        <meta name="description" content="在线二维码生成器，将制定的网址生成二维码，可以指定二维码的高度和宽度。">
+        <link href="./cdn.staticfile.org/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+        <!-- Bootstrap Core CSS -->
+        <link href="./cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/wp-content/themes/toolrunoob/startbootstrap/css/modern-business.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="/wp-content/themes/toolrunoob/assets/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <!-- PHP 代码 -->
+        <link rel="stylesheet" href="/wp-content/themes/toolrunoob/style.css?version=1.03">
+        <script src="./cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+        <script src="./cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top runoob-header" role="navigation"></nav>
+        
+        <div class="container">
+
+            <br>
+            <script src="./cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+            <script type="text/javascript">
+                $(function() {
+                    $("#mkqrcode").click(function() {
+                        text = $.trim($("#str").val());
+                        qrcode_w = parseInt($("#qrcode_w").val()) > 0 ? parseInt($("#qrcode_w").val()) : 64;
+                        qrcode_h = parseInt($("#qrcode_h").val()) > 0 ? parseInt($("#qrcode_h").val()) : 64;
+                        console.log(qrcode_w);
+                        console.log(qrcode_h);
+                        jQuery('#qrcodeCanvas').empty();
+                        jQuery('#qrcodeCanvas').qrcode({
+                            width: qrcode_w,
+                            height: qrcode_h,
+
+                            text: text
+                        });
+                    });
+                    $("#qrcode_h").keyup(function() {
+                        $("#qrcode_w").val($(this).val());
+                    })
+                    $('#download').click(function() {
+                        this.href = $('canvas')[0].toDataURL();
+                        // Change here
+                        this.download = 'qrcode.png';
+                    });
+
+                    $("#mkqrcode").click();
+                })
+            </script>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="media">
+                                <div class="media-body">
+                                    <h4 class="media-heading">在线二维码生成器</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">文字内容</span>
+                                <input type="text" class="form-control" id="str" placeholder="在此输入" value="" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group" style="margin-top: 20px;">
+                                <span class="input-group-addon" id="basic-addon1">高度</span>
+                                <input type="text" class="form-control" id="qrcode_h" placeholder="二维码高度" value="128" aria-describedby="basic-addon1">
+                                <span class="input-group-addon" id="basic-addon1">宽度</span>
+                                <input type="text" class="form-control" id="qrcode_w" placeholder="二维码宽度" value="128" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="btn-group" role="group" aria-label="..." style="margin-top: 20px;">
+                                <button type="button" class="btn btn-success" id="mkqrcode">生成二维码</button>
+                                <a class="btn btn-default" id="download">下载二维码</a>
+                            </div>
+                            <div id="qrcodeCanvas" style="text-align:center;margin: 30px;"></div>
+                        </div>
+                        <div class="panel-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
