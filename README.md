@@ -62,7 +62,7 @@
 
 <a href="https://dadaewqq.github.io/fun/28/" target="_blank"> 中国传统色 </a>   
 
-<a href="https://dadaewqq.github.io/fun/29/" target="_blank"> 留个白 </a>   
+<a href="https://dadaewqq.github.io/fun/29/" target="_blank"> 找找灵感吧 </a>   
 
 <a href="https://dadaewqq.github.io/fun/30/" target="_blank"> 下载Github文件夹 </a>   
 
@@ -82,7 +82,11 @@
 
 <a href="https://dadaewqq.github.io/fun/37_A/" target="_blank"> 在线音乐播放器_2 </a>   
 
+<a href="https://dadaewqq.github.io/fun/38/" target="_blank"> 二维码生成_1 </a>  
 
+<a href="https://dadaewqq.github.io/fun/38_A/" target="_blank"> 二维码生成_2 </a>  
+
+<a href="https://dadaewqq.github.io/fun/38_B/" target="_blank"> 二维码生成_3 </a>  
 
 
 
