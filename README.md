@@ -28,7 +28,9 @@
 
 <a href="https://dadaewqq.github.io/fun/13/" target="_blank"> ig fonts </a>  
 
-<a href="https://dadaewqq.github.io/fun/14/" target="_blank"> 字符加密 </a>  
+<a href="https://dadaewqq.github.io/fun/14/" target="_blank"> 字符加密_1 </a>  
+
+<a href="https://dadaewqq.github.io/fun/14_A/" target="_blank"> 字符加密_2 </a>  
 
 <a href="https://dadaewqq.github.io/fun/15/" target="_blank"> 看板娘 </a>   
 
