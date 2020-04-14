@@ -22,13 +22,13 @@
 
 <a href="https://dadaewqq.github.io/fun/10_B/" target="_blank"> MD editor_3 </a>  
 
-<a href="https://dadaewqq.github.io/fun/11/" target="_blank"> 零宽字符 </a>  
+<a href="https://dadaewqq.github.io/fun/11/" target="_blank"> 零宽字符_1 </a>  
 
 <a href="https://dadaewqq.github.io/fun/12/" target="_blank"> 跳转主页 </a>  
 
 <a href="https://dadaewqq.github.io/fun/13/" target="_blank"> ig fonts </a>  
 
-<a href="https://dadaewqq.github.io/fun/14/" target="_blank"> 字符加密_1 </a>  
+<a href="https://dadaewqq.github.io/fun/14/" target="_blank"> 零宽字符_2 </a>  
 
 <a href="https://dadaewqq.github.io/fun/15/" target="_blank"> 看板娘 </a>   
 
