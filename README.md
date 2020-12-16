@@ -88,8 +88,9 @@
 
 <a href="https://dadaewqq.github.io/fun/38_B/" target="_blank"> 二维码生成_3 </a>  
 
-<a href="https://dadaewqq.github.io/fun/389/" target="_blank"> 屏保时钟 </a>  
+<a href="https://dadaewqq.github.io/fun/39/" target="_blank"> 屏保时钟 </a>  
 
+<a href="https://dadaewqq.github.io/fun/40/" target="_blank"> 与佛论禅 </a>  
 
 
 
