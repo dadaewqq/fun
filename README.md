@@ -92,6 +92,7 @@
 
 <a href="https://dadaewqq.github.io/fun/40/" target="_blank"> 与佛论禅 </a>  
 
+<a href="https://dadaewqq.github.io/fun/41/" target="_blank"> 字符串加密 </a>
 
 
 
