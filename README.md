@@ -94,6 +94,8 @@
 
 <a href="https://dadaewqq.github.io/fun/41/" target="_blank"> 字符串加密 </a>
 
+<a href="https://dadaewqq.github.io/fun/42/" target="_blank"> 举牌小人 </a>
+
 
 
 

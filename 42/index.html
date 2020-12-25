@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content='UPUP 举牌加油小人产生器 - Haniboi' name='title' />
+  <meta content='UPUP 举牌加油小人产生器 - Haniboi' name='og:title' />
+  <meta content="./goupup.co/images/output.png" property="og:image" />
+  <meta name="description" content="UPUP 举牌加油小人产生器！现在就一起来让加油小人说出你的心声！">
+  <title>UPUP 举牌加油小人产生器 - Haniboi</title>
+  <link href='./fonts.googleapis.com/css.css?family=Varela+Round' rel='stylesheet' type='text/css' />
+  <link href='./materials/fav.png' rel='shortcut icon'>
+  <meta content='width=680, maximum-scale=1' name='viewport'>
+  <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+  <link href="./stylesheets/site/clear_default.css" rel="stylesheet" type="text/css" />
+  <link href="./stylesheets/site/up_style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./stylesheets/fonts.css" media="screen" />
+  <link rel="stylesheet" href="./stylesheets/style.css" media="screen" />
+  <script src='./javascripts/jquery.js' type='text/javascript'></script>
+  <script>
+  $().ready (function () {
+    $('a.bg-block, a.button-sharp, #save img').click (function (e) { $('#output, .sth').show (); });
+    $('#words').keydown (function (e) { $('#output, .sth').show (); });
+    $('body').click (function () { $('#pop_play', window.parent.document).hide(); });
+    $('.wrapper').click (function (e) { e.stopPropagation () });
+  })
+  </script>
+  <script src='javascripts/jquery.scrollTo.min.js' type='text/javascript'></script>
+  <script src='javascripts/modernizr.custom.js' type='text/javascript'></script>
+  <script src='javascripts/binary.js' type='text/javascript'></script>
+  <script src='javascripts/stuff.js' type='text/javascript'></script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+  </script>
+</head>
+
+<body>
+
+
+
+<div id="fb-root"></div>
+<!--auto_root_box_st-->
+<div id="auto_root_box">
+    <div class="wrapper main">
+      <h1>
+        <img src="materials/logo.png" alt="UPUP 举牌加油小人产生器 - Haniboi" width="280" />
+      </h1>
+      <h3 data-lang="your_message_here">你想说的话</h3>
+      <textarea id="words" placeholder="写些想说的话...用空白、断行排列小人！"></textarea>
+      <h3 data-lang="background_colors">背景色</h3>
+      <a data-color="#E50012" class="bg-block"></a>
+      <a data-color="#EA5415" class="bg-block"></a>
+      <a data-color="#f49ec0" class="bg-block"></a>
+      <a data-color="#f6f08b" class="bg-block"></a>
+      <a data-color="#c1d540" class="bg-block"></a>
+      <a data-color="#60c3ba" class="bg-block"></a>
+      <a data-color="#77cff0" class="bg-block"></a>
+      <a data-color="#980c7e" class="bg-block"></a>
+      <br />
+      <h3 class="inline">形 状&nbsp;:&nbsp;&nbsp;</h3>
+      <a class="button-sharp" data-size="facebook" data-lang="facebook_cover">&nbsp;长 形&nbsp;</a>
+      &nbsp;&nbsp;
+      <a class="button-sharp" data-size="square" data-lang="square">&nbsp;方 形&nbsp;</a>
+      <br />
+      <div id="save" class="inline">
+        <img src="materials/refresh.png" alt="refresh" title="刷新"/>
+        <img src="materials/make.png" alt="make" title="制作"/><br />
+      </div>
+      <img id="output" style="display: none;"/>
+
+      <div class="sth" style="display: none;">
+        <a id="download" class="button green" download="upup.png" target="_blank" data-lang="download_this_pic">下载该图片</a>
+
+      </div>
+
+      <canvas width="850" height="315" id="canvas-bg"></canvas>
+      <canvas width="850" height="315" id="canvas-people"></canvas>
+      <canvas width="850" height="315" id="canvas-text"></canvas>
+      <canvas width="850" height="315" id="canvas-mark"></canvas>
+    </div>
+
+</div>
+<!--auto_root_box_end-->
+
+</body>
+</html>
